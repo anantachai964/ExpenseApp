@@ -4,13 +4,13 @@ function Header() {
   return (
     <header className="h-header-h w-full p-4 rounded-b-4xl rounded-t-4xl bg-[url('/img/header-01.png')] bg-cover bg-center bg-no-repeat flex justify-center items-center">
       {/* div ที่จัดการตัวเเหน่ง */}
-      <div className="mt-20 h-3/5 w-9/10 bg-white/20 backdrop-blur-3xl mx-auto rounded-lg shadow-xl p-4">
+      <div className="mt-20 h-3/5 w-9/10 bg-white/20 backdrop-blur-3xl mx-auto rounded-4xl shadow-xl p-4">
         {/* ยอดเงินคงเหลือ */}
         <p className="text-[10px] text-black/40 tracking-widest mb-1">
           ยอดคงเหลือ
         </p>
         {/* จำนวนเงิน */}
-        <p className="font-extrabold text-2xl leading-none text-black/70 font-prompt mb-6">
+        <p className="font-extrabold text-2xl leading-none text-black/70 font-prompt mb-4">
           1,234.56
         </p>
         {/* รายรับเเละรายจ่าย */}
