@@ -1,12 +1,14 @@
 import "./App.css";
 import Header from "./Components/Header";
 import DailyBudgetWidget from "./Components/DailyBudgetWidget"; 
+import AddForm from "./Components/AddForm";
 
 function App() {
   return (
-    <div className="max-w-md mx-auto min-h-screen overflow-x-hidden bg-indigo-50 rounded-t-4xl font-sarabun">
+    <div className="mx-auto min-h-screen overflow-x-hidden bg-indigo-50 font-sarabun">
       <Header />
       <DailyBudgetWidget />
+      <AddForm />
     </div>
   );
 }
