@@ -37,9 +37,9 @@ function AddForm() {
         />
       </div>
       {/* ปุ่มบันทึก */}
-      <div className="w-full mt-4 bg-red-400 text-sm text-white border-slate-400 p-4 rounded-xl font-bold tracking-widest text-center">
+      <button className="w-full mt-4 bg-red-400 text-sm text-white border-slate-400 p-4 rounded-xl font-bold tracking-widest text-center">
         บันทึกรายจ่าย
-      </div>
+      </button>
     </div>
   );
 }

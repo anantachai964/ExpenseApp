@@ -2,6 +2,8 @@ import "./App.css";
 import Header from "./Components/Header";
 import DailyBudgetWidget from "./Components/DailyBudgetWidget"; 
 import AddForm from "./Components/AddForm";
+import Current from "./Components/Current";
+import ListItem from "./Components/ListItem";
 
 function App() {
   return (
@@ -9,6 +11,8 @@ function App() {
       <Header />
       <DailyBudgetWidget />
       <AddForm />
+      <Current />
+      <ListItem />
     </div>
   );
 }
