@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header() {
+function Header({ summary }) {
   return (
     <header className="h-header-h w-full p-4 bg-[url('/img/header-01.png')] bg-cover bg-center bg-no-repeat flex justify-center items-center">
       {/* div ที่จัดการตัวเเหน่ง */}
@@ -11,7 +11,7 @@ function Header() {
         </p>
         {/* จำนวนเงิน */}
         <p className="font-extrabold text-xl leading-none text-black/70 font-prompt mb-4">
-          1,234.56
+          {summary.balance.toLocaleString()}
         </p>
         {/* รายรับเเละรายจ่าย */}
         <div className="grid grid-cols-2 gap-4">
@@ -20,7 +20,7 @@ function Header() {
               รายรับ
             </p>
             <p className="font-extrabold text-lg leading-none text-black/70 font-prompt">
-              1,234.56
+              {summary.total_income.toLocaleString()}
             </p>
           </div>
           <div className="bg-white/15 rounded-2xl p-4">
@@ -28,7 +28,7 @@ function Header() {
               รายจ่าย
             </p>
             <p className="font-extrabold text-lg leading-none text-black/70 font-prompt">
-              1,234.56
+              {summary.total_expense.toLocaleString() }
             </p>
           </div>
         </div>
