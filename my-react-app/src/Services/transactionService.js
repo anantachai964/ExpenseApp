@@ -26,7 +26,7 @@ export function createTransaction({ type, amount, category, note }) {
     amount: this.amount,
     category: this.category,
     note: this.note ?? "",
-    date: new Date().toString(),
+    date: new Date().toISOString(),
   };
 
   [nexTx, ...transactions];

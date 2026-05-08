@@ -5,23 +5,24 @@ export function getAllBudget() {
 }
 
 export function updateBudget(amount) {
-  budget.amount = this.amount;
+  budget.amount = amount;
   budget.updated_at = new Date().toISOString();
   return { ...budget };
 }
 
 export function getBudgetStatus() {
-  const today = new Date().toISOString();
-  const spent = transactions;
-  spent
+  const today = new Date().toDateString();
+  const spent = transactions
     .filter((tx) => {
-      return tx.type === "expense" && new Date(tx.date).toISOString() === today;
+      return (
+        tx.type === "expense" && new Date(tx.date).toDateString() === today
+      );
     })
     .reduce((sum, tx) => sum + tx.amount, 0);
 
   const remaining = budget.amount - spent;
   const pct = budget.amount ? (spent / budget.amount) * 100 : 0;
-  const status = pct >= 100 ? "over" : pct >= 70 ? "war" : "0k";
+  const status = pct >= 100 ? "over" : pct >= 70 ? "warn" : "0k";
 
   return { budget: budget.amount, spent, remaining, pct, status };
 }
