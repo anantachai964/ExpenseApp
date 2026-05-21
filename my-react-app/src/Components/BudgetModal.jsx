@@ -41,7 +41,7 @@ function BudgetModal({ isOpen, onClose, onSave, budget }) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-white w-full max-w-md rounded-t-3xl p-6 "
+        className={`bg-white w-full max-w-md rounded-t-3xl p-6 transition-transform duration-500 ${isOpen ? "translate-y-0" : "translate-y-full"}`}
       >
         <div className="w-10 h-1 bg-slate-200 rounded-full mx-auto mb-6" />
         <p className="font-bold text-md text-slate-800 m-4">
